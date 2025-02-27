@@ -1,34 +1,22 @@
-﻿using System;
+﻿using ConsoleAppDevOp;
+using System;
 using System.Collections.Generic;
-
-class Employee
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Position { get; set; }
-
-    public void Display()
-    {
-        Console.WriteLine($"ID: {Id}, Name: {Name}, Position: {Position}");
-    }
-}
 
 class Program
 {
-    static List<Employee> employees = new List<Employee>();
     static int nextId = 1;
-
+    static List<Employee> employees = new List<Employee>();
     static void Main()
     {
         while (true)
         {
-            Console.WriteLine("\n--- QUẢN LÝ NHÂN VIÊN ---");
-            Console.WriteLine("1. Thêm nhân viên");
-            Console.WriteLine("2. Hiển thị danh sách nhân viên");
-            Console.WriteLine("3. Sửa thông tin nhân viên");
-            Console.WriteLine("4. Xóa nhân viên");
-            Console.WriteLine("5. Thoát");
-            Console.Write("Chọn chức năng: ");
+            Console.WriteLine("\n--- management employee ---");
+            Console.WriteLine("1. add");
+            Console.WriteLine("2. Show");
+            Console.WriteLine("3. Edit");
+            Console.WriteLine("4. Delete");
+            Console.WriteLine("5. Exit");
+            Console.Write("Choice function : ");
 
             switch (Console.ReadLine())
             {
